@@ -67,6 +67,11 @@ A [tenant repository](https://github.com/fluxcd/flux2-multi-tenancy/tree/dev-tea
 
 ## Bootstrap the staging cluster
 
+```
+kind create cluster --name tenancy
+```
+
+
 Install the Flux CLI and fork this repository on your personal GitHub account
 and export your GitHub username and repo name:
 
@@ -79,13 +84,13 @@ Verify that your staging cluster satisfies the prerequisites with:
 
 ```sh
 flux check --pre
-```
+ ```
 
 Set the `--context` argument to the kubectl context to your staging cluster and bootstrap Flux:
 
 ```sh
 flux bootstrap github \
-    --context=your-staging-context \
+    --context=kind-tenancy \
     --owner=${GITHUB_USER} \
     --repository=${GITHUB_REPO} \
     --branch=main \
