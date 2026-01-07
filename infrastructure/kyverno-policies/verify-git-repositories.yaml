@@ -23,4 +23,4 @@ spec:
         message: ".spec.url must be from a repository within the organisation X"
         pattern:
           spec:
-            url: https://github.com/fluxcd/?* | ssh://git@github.com:fluxcd/?*
+            url: https://github.com/schmichri/?* | ssh://git@github.com:schmichri/?*
